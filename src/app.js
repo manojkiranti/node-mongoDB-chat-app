@@ -5,6 +5,8 @@ import helmet from "helmet";
 import ExpressMongoSanitize from "express-mongo-sanitize";
 import cookieParser from "cookie-parser";
 import compression from "compression";
+import fileUpload from "express-fileupload";
+import cors from "cors";
 
 // dotEnv config
 dotenv.config();
@@ -31,6 +33,12 @@ app.use(cookieParser());
 
 // gzip compression
 app.use(compression());
+
+// file upload
+app.use(fileUpload({ useTempFiles: true }));
+
+// cors
+app.use(cors());
 
 app.post("/", (req, res) => {
     console.log(req.body)
