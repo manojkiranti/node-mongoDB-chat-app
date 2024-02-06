@@ -1,0 +1,14 @@
+{
+  "name": "whatsappp-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ./src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2"
+  }
+}
